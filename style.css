@@ -1,7 +1,7 @@
 :root {
     --bg-color: #0a0a0a;
     --card-bg: rgba(255, 255, 255, 0.03);
-    --accent-color: #042eb8;
+    --accent-color: #6366f1;
     --text-main: #ffffff;
     --text-dim: #a1a1aa;
     --glass-border: rgba(255, 255, 255, 0.1);
@@ -68,7 +68,7 @@ body {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -86,9 +86,11 @@ body {
 .logo span { color: var(--accent-color); }
 
 .nav-links {
-    display: flex;
+    display:flex;
     list-style: none;
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-links a {
@@ -104,6 +106,36 @@ body {
 }
 
 /* Hero Section */
+/* Estilos para el logo en la sección Hero */
+.hero-logo {
+    display: block;
+    width: 150px;          /* Ajusta el tamaño a tu gusto */
+    height: auto;
+    margin: 0 auto 1.5rem; /* Centra y da espacio respecto al badge */
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); /* Sombra para efecto 3D */
+    animation: float 6s ease-in-out infinite; /* Animación sutil de flotado */
+}
+
+/* Animación de flotado premium */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .hero-logo {
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+}
 .hero {
     height: 100vh;
     display: flex;
